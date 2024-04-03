@@ -1,0 +1,54 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="gestion-libreria.component.css">
+  </head>
+<body>
+<div class="container">
+    <div class="row align-items-center mb-3">
+      <div class="col-auto">
+        <h2>Gestión de libros</h2>
+      </div>
+      <div class="col-auto ml-auto">
+        <a routerLink="/nuevo" class="btn btn-primary">Subir nuevo libro</a>
+      </div>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Imagen</th>
+          <th>Título</th>
+          <th>Autor</th>
+          <th>Páginas</th>
+          <th>Tipo</th>
+          <th>Editorial</th>
+          <th>Sinopsis</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of productos">
+          <td>
+            <img src="{{producto.imagen}}" alt="Imagen del libro" width="80" height="120">
+          </td>
+          <td>{{producto.titulo}}</td>
+          <td>{{producto.autor}}</td>
+          <td>{{producto.paginas}}</td>
+          <td>{{producto.tipo}}</td>
+          <td>{{producto.editorial}}</td>
+          <td>{{producto.sinopsis}}</td>
+          <td>{{producto.precio}}</td>
+          <td>{{producto.stock}}</td>
+          <td>
+            <a [routerLink]="['/editar', producto._id]" class="btn btn-secondary btn-separate">Editar</a>
+              <button class="btn btn-danger btn-separate" (click)="borrar(producto._id)">Borrar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div><button class="btn btn-primary" (click)="irUsuarios()">USUARIOS</button></div>
+    <hr>
+  </div>
+</body>
+<app-socios *ngIf="ok==true" (onUsuarioCambiado)="onUsuarioCambiado()"></app-socios>

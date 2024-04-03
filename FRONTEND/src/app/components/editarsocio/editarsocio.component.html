@@ -1,0 +1,32 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="editarsocio.component.css">
+  </head>
+  <h2>Actualizar Usuario:</h2>
+  <form #nuevoSocioForm="ngForm" (ngSubmit)="submitForm()" novalidate>
+    <div class="form-group">
+      <label>Nombre:</label>
+      <input type="text" [(ngModel)]="nombre" name="nombre" required>
+    </div>
+    <div class="form-group">
+      <label>Apellido:</label>
+      <input type="text" [(ngModel)]="apellido" name="apellido" required>
+    </div>
+    <div class="form-group">
+      <label>Edad:</label>
+      <input type="number" [(ngModel)]="edad" name="edad" required min="1">
+      <div *ngIf="edad < 1" class="error-message">Debe ingresar un número positivo</div>
+    </div>
+    <div class="form-group">
+      <label>Email:</label>
+      <input type="email" [(ngModel)]="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label>Password:</label>
+      <input type="password" [(ngModel)]="password" name="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary" *ngIf="id">Actualizar usuario</button>
+  
+    <div *ngIf="nuevoSocioForm.submitted && nuevoSocioForm.invalid" class="error-message">Debe completar todos los campos requeridos</div>
+  </form>
+  

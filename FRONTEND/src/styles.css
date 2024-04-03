@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+#articulos app-articulo article {
+   
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+#articulos app-articulo article img {
+    width: 100%;   
+}
+
+#articulos app-articulo article button {
+    background-color: var(--color-principal);
+}
+
+.new {
+    padding: 10px;
+}
+
+.titulo {
+    padding: 10px;
+}
+

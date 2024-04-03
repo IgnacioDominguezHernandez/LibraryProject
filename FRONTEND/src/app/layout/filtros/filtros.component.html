@@ -1,0 +1,21 @@
+<aside id="filtros-aside">
+    <h1 id="titulo-filtros">Filtros</h1>
+    <hr>
+    <form id="form-filtros">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="stock" id="stock" [(ngModel)]="stock">
+            <label class="form-check-label" for="stock">Stock</label>
+        </div>
+        <label class="form-check-label" for="precio">Precio:</label>
+
+        <input type="range" [(ngModel)]="precio" id="precioRango" name="precio" min="0" max="50" step="0.5">
+        <div class="form-group">
+            <input type="text" class="form-control full-width" [(ngModel)]="precio" id="precio-valor" name="precio" min="0">
+        </div>
+        <div *ngIf="stock">
+            <label class="form-check-label" for="canStock">Cantidad:</label>
+            <input type="number" [(ngModel)]="canStock" id="canStock" name="canStock" min="0" >
+        </div>
+        <button (click)="filtrar()">Filtrar</button>
+    </form>
+</aside>

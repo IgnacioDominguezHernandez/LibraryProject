@@ -1,0 +1,26 @@
+<div id="pedidos-container">
+    <section class="row">
+      <h5 (click)="mostrar = !mostrar">MOSTRAR MIS PEDIDOS</h5>
+      <div *ngIf="mostrar">
+        <div *ngFor="let pedido of productosPedidos; let i = index">
+          <h4><strong>Pedido: {{i+1}}</strong></h4>
+          <div *ngFor="let producto of pedido.productos">
+            <div class="producto">
+              <!--  <img [src]="producto.imagen" class="producto-imagen">  -->
+                <div class="producto-detalles">
+                    <div class="producto-titulo">{{producto.titulo}}</div>
+                    <div class="producto-precio">Precio: {{producto.precio}}</div>
+                    <div class="producto-cantidad">Cantidad: {{producto.cantidad}}</div>
+                </div>
+            </div>
+        </div>
+          <div class="total-pedido"><strong>Total del pedido: {{pedido.total}}</strong></div>
+          <hr>
+        </div>
+        <div *ngIf="productosPedidos.length === 0" class="mensaje-vacio">No se han realizado compras</div>
+      </div>
+    </section>
+  </div>
+  
+  
+  

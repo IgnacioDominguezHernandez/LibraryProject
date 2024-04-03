@@ -1,0 +1,26 @@
+<div id="contenido-articulos">
+
+<article>
+    <!--efecto hover imagen de codepen    -->
+    <figure class="imagenPrincipal">
+        <a href="#">
+            <img [src]="informacion.imagen" alt="no-img" />
+        </a>
+    </figure>
+    <div class="info-producto">
+        <span class="producto">
+            <h5 class="titulo">{{informacion.titulo}} - {{informacion.autor}}</h5>
+            <span class="sinopsis">{{informacion.editorial}}.</span>
+            <hr>
+            <span class="sinopsis">{{informacion.sinopsis}}</span>
+            <hr><strong>
+            <span class="precio">€{{informacion.precio}} - </span>
+            <span class="paginas">{{informacion.paginas}} páginas - </span>
+            <span class="stock">{{informacion.stock}} uds.</span>
+            </strong>
+        </span>
+        <button class="btn btn-danger" (click)="addCarrito()" *ngIf="estaConectado">Añadir al carrito</button>
+    </div>
+</article>
+
+</div>

@@ -1,0 +1,81 @@
+<header class="d-flex justify-content-between align-items-center">
+  <div class="d-flex align-items-center">
+    <section id="logo">
+      <a routerLink="/"><img src="../../../assets/logoLibrería.png" class="logo" /></a>
+    </section>
+  </div>
+  
+    <div id="nav-container">
+    <nav id="menu_principal" class="d-none d-lg-flex">
+      <div class="entradaMenuWrapper">
+        <a class="enlaceMenuPrincipal" routerLink="/" [queryParams]="{tipo:'narrativa'}"
+          [queryParamsHandling]="'merge'">Narrativa</a>
+      </div>
+  <!--queryparams es lo que aparece despues de la ? en el navegador, valido para filtrar-->
+  <!--'merge', lo que significa que el valor actual del parámetro de consulta se combinará con cualquier valor adicional que se agregue a través de este enlace, en lugar de sobrescribirlo por completo-->
+      <div class="entradaMenuWrapper">
+        <a class="enlaceMenuPrincipal" routerLink="/" [queryParams]="{tipo:'poesia'}"
+          [queryParamsHandling]="'merge'">Poesia</a>
+      </div>
+  
+      <div class="entradaMenuWrapper">
+        <a class="enlaceMenuPrincipal" routerLink="/" [queryParams]="{tipo:'clasicos'}"
+          [queryParamsHandling]="'merge'">Clásicos</a>
+      </div>
+    </nav>
+</div>
+    <section class="d-flex align-items-center">
+      <div id="login">
+        <!-- Button trigger modal -->
+        <button id="b1" type="button" class="btn btn-primary" *ngIf="!estaConectado" data-toggle="modal" data-target="#loginModal">
+          Inicia Sesión
+        </button>        
+        <button id="b1" type="button" class="btn btn-primary" *ngIf="!estaConectado" data-toggle="modal" data-target="#registerModal">
+          Registrar
+        </button>
+        <button id="b1" type="button" class="btn btn-primary" (click)="cerrarSesion()" *ngIf="estaConectado">
+          Cerrar sesion
+        </button>
+        <button id="b1" type="button" class="btn btn-primary" *ngIf="verificarEsAdmin" routerLink="gestion">
+          Gestionar
+        </button>
+      </div>
+      <section id="cesta" class="ml-3">
+        <a href="#" style="position: relative;">
+          <i class="bi bi-cart-fill cart-icon"></i>
+          <span class="position-absolute badge rounded-pill bg-danger"
+                style="top: 180%; left: 28%; transform: translate(-50%, 0);">
+            {{totalArticulos}}
+          </span>
+        </a>
+      </section>
+    </section>
+  </header>
+    
+  
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <app-login></app-login>
+  </div>
+</div>
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <app-registro></app-registro>
+  </div>
+</div>
+<div class="toast" *ngIf="showToast" role="alert" aria-live="assertive" aria-atomic="true"
+  style="opacity: 1; position: fixed; right: 50px; bottom: 50px;">
+  <div class="toast-header">
+      <strong class="mr-auto">Mensaje</strong>
+      <button type="button" class="ml-2 mb-1 close" (click)="showToast=false" data-dismiss="toast" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <div class="toast-body">
+      Inicio de sesión correcto
+  </div>
+</div>
+
+
+

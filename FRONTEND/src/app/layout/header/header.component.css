@@ -1,0 +1,76 @@
+/* Estilos adicionales para el header */
+header {
+  background-color: #2E7D32; /* Color de fondo verde */
+  font-family: 'Roboto', sans-serif; /* Fuente Roboto de Google Fonts */
+  padding: 10px 0; /* Padding para dar espacio alrededor del contenido del header */
+}
+
+
+.elNombre {
+  color: white;
+  font-weight: lighter;
+  margin-left: 28px;
+  text-align: center;
+  font-size: small;
+  font-style: italic;
+ }
+
+/* Estilos adicionales para los botones */
+#login .btn {
+  background-color: #60A583; /* Color de fondo verde claro */
+  border-color: #60A583; /* Color de borde verde claro */
+  color: #fff; /* Color del texto blanco */
+  margin-right: 5px; /* Separación entre los botones */
+  margin-bottom: 20px;
+}
+
+#login .btn:hover {
+  background-color: #86C6B9; /* Color de fondo verde más claro al pasar el cursor */
+  border-color: #86C6B9; /* Color de borde verde más claro al pasar el cursor */
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  margin-left: 20px;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
+#cesta .bi-cart-fill {
+  color: #fff; /* Color del ícono del carrito en blanco */
+  margin-right: 30px;
+}
+
+#cesta:hover .bi-cart-fill {
+  color: #86C6B9; /* Color del ícono del carrito más claro al pasar el cursor */
+}
+
+/* Estilos para el menú principal */
+#menu_principal .entradaMenuWrapper {
+  margin-right: 15px; /* Separación entre las opciones del menú */
+}
+
+#menu_principal .enlaceMenuPrincipal {
+  font-size: 2.0rem; /* Tamaño de letra más grande */
+  color: #fff; /* Color del texto blanco */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+#menu_principal .enlaceMenuPrincipal:hover {
+  color: #86C6B9; /* Color del texto más claro al pasar el cursor */
+}
+
+#nav-container {
+  display: flex;
+  align-items: flex-end; /* Alineación vertical hacia abajo */
+}
+
+nav > div {
+  padding: 20px;
+  margin-top: 65px;
+}
+

@@ -1,0 +1,16 @@
+.btn-separate {
+    margin-top: 15px;
+  }
+
+  body {
+    background-color: #5a8080; /* cambia el valor por el color que desees */
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+  
+  td, th {
+    border-top: 5px solid white;
+    border-bottom: 1px solid white;
+  }

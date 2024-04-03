@@ -1,0 +1,38 @@
+#contenido-articulos article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .imagenPrincipal {
+    margin-bottom: 10px;
+  }
+  
+  .imagenPrincipal img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  
+  .info-producto {
+    font-size: 14px;
+  }
+
+  #contenido-articulos article .btn {
+    background-color: #f44336;
+    border: 3px solid white;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+#contenido-articulos article .btn:hover {
+    background-color: #d32f2f;
+}
+  
+  

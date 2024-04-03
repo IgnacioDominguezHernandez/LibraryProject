@@ -1,0 +1,57 @@
+h2 {
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-right: 10px;
+    width: 80px; /* ancho fijo para etiqueta */
+    text-align: right; /* alineación a la derecha de la etiqueta */
+  }
+  
+  input[type="text"],
+  select,
+  textarea,
+  input[type="number"] {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    width: calc(100% - 90px); /* ancho calculado para el campo de entrada */
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: calc(100% - 90px);
+    margin-left: auto;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 5px;
+  }
+  
+  

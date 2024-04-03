@@ -1,0 +1,39 @@
+/* Asegurar que el contenedor del formulario ocupe el 100% del ancho */
+:host {
+    display: block;
+    width: 100%;
+  }
+
+  h2 {
+    text-align: center;
+  }
+  
+  /* Centrar el formulario en el contenedor */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px; 
+    margin: 0 auto; /* Centrar el formulario horizontalmente */
+    padding: 2rem; /* Espaciado alrededor del formulario */
+  }
+  
+  /* Alinear los elementos del formulario a la izquierda */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Ajustar el ancho de los campos de entrada */
+  input {
+    width: 100%;
+  }
+  
+  /* Alinear el botón de envío al centro */
+  button {
+    align-self: center;
+  }
+  

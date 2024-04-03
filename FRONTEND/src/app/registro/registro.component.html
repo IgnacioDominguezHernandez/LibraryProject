@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registro.component.css">
+    <title>Registro</title>
+</head>
+<body>
+    <div class="modal-content">
+      <form class="form-container">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Registrar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">       
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input type="text" name="nombre" [(ngModel)]="nombre" id="nombre" placeholder="Maria" autocomplete="new-nombre" />
+            </div>
+            <div class="form-group">
+              <label for="apellido">Apellido:</label>
+              <input type="text" name="apellido" [(ngModel)]="apellido" id="apellido" placeholder="Perez" autocomplete="new-apellido" />
+            </div>
+            <div class="form-group">
+              <label for="edad">Edad:</label>
+              <input type="text" name="edad" [(ngModel)]="edad" id="edad" placeholder="edad" autocomplete="new-edad"/>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" name="email" [(ngModel)]="email" id="email" placeholder="abc@gmail.com" autocomplete="new-email" />
+            </div>
+            <div class="form-group">
+              <label for="password">Contraseña:</label>
+              <input type="password" name="password" [(ngModel)]="password" id="password" placeholder="123456" autocomplete="new-password" />
+            </div>
+            <div *ngIf="mensajeRegistro">
+              {{ mensajeRegistro }}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" (click)="register()">Registrar</button>
+              <button type="button" class="btn btn-danger" id="clear" (click)="clearForm()">Borrar</button>
+            </div>  
+        </div>
+      </form>
+      </div>
+</body>
+</html>
+
+
+
+

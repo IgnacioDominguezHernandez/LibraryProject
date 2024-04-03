@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row align-items-center mb-3">
+      <div class="col-auto">
+        <h2>Gestión de socios</h2>
+      </div>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Edad</th>
+          <th>Email</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let socio of socios">
+          <td>{{socio.nombre}}</td>
+          <td>{{socio.apellido}}</td>
+          <td>{{socio.edad}}</td>
+          <td>{{socio.email}}</td>
+          <td>
+            <a [routerLink]="['/editarSocio', socio._id]" class="btn btn-secondary btn-separate">Editar</a>
+            <button class="btn btn-danger btn-separate" (click)="borrar(socio._id)">Borrar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div><button class="btn btn-primary" (click)="volver()" >VOLVER</button></div>
+  </div>
+

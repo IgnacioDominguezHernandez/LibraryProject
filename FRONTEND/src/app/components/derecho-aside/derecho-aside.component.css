@@ -1,0 +1,34 @@
+#aside-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    padding: 0px;
+    justify-content: center; /* Agregar esta línea */
+    text-align: center; 
+  }
+  
+  #aside-container img {
+    margin-top: 20px; /* Ajustar este valor si es necesario */
+    width: 200px;
+    height: 270px;
+    object-fit: contain;
+
+  }
+  
+  #aside-container h5 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  #aside-container table {
+    margin-bottom: 20px;
+  }
+  
+  #aside-container button {
+    margin: 5px;
+  }
+
+  h3 {
+    margin-top: 90px;
+  }
+  

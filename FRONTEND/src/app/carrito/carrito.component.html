@@ -1,0 +1,22 @@
+<div class="productos-container" *ngFor="let producto of productosCarrito">
+  <div class="producto">
+    <img [src]="producto.imagen" class="producto-imagen" alt="...">
+    <div class="producto-detalles">
+      <h5 class="producto-nombre">{{producto.titulo}}</h5>
+      <p class="producto-cantidad">Cantidad: {{producto.cantidad}}</p>
+      <p class="producto-precio">Precio: {{(producto.precio * producto.cantidad).toFixed(2)}}</p>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="productosCarrito.length === 0" class="mensaje-vacio">El carrito está vacío</div>
+
+<div class="total-container" *ngIf="productosCarrito.length > 0">
+  <p>Total: {{total.toFixed(2)}}</p>
+  <button (click)="comprar()">Comprar</button>
+</div>
+
+
+
+
+

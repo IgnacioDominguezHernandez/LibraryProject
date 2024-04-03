@@ -1,0 +1,35 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title">Iniciar sesión</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body form-container"> <!-- Agregar la clase form-container aquí -->
+    <form>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" name="email" [(ngModel)]="email" id="email" placeholder="abc@gmail.com" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" [(ngModel)]="password" id="password" placeholder="123456" required minlength="3">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="remember">
+        <label class="form-check-label" for="remember">Recordar contraseña</label>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary" id="login"(click)="onLogin()" >Iniciar sesión</button>
+    <button type="button" class="btn btn-danger" id="clear" (click)="clearForm()">Borrar</button>
+  </div>
+</div>
+
+
+
+
+
+

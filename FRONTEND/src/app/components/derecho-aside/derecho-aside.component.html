@@ -1,0 +1,12 @@
+<!-- derecho-aside.component.html -->
+<div id="aside-container">
+  <ng-container *ngIf="(storeService.conectado | async)">
+    <app-carrito (compraRealizada)="refrescarCompras()"></app-carrito>
+    <hr>
+    <app-compras *ngIf="actualizarCompras"></app-compras>
+  </ng-container>
+  <ng-container *ngIf="!(storeService.conectado | async)">
+    <h3>Completa tu biblioteca!!</h3>
+    <img class="logoderecha" src="../../../assets/libreria2.png">
+  </ng-container>
+</div>
