@@ -19,6 +19,7 @@
             <span class="stock">{{informacion.stock}} uds.</span>
             </strong>
         </span>
+        <!-- Botón para añadir al carrito, solo se muestra si el usuario está conectado -->
         <button class="btn btn-danger" (click)="addCarrito()" *ngIf="estaConectado">Añadir al carrito</button>
     </div>
 </article>
